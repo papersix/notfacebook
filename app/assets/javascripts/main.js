@@ -62,16 +62,16 @@ function saveEvent(e){
 $(function() {
 
   console.log('test test')
-  getEvents();
+ //  getEvents();
 
-  $('#save').click(function() {
-    saveEvent()
-    getEvents()
-  })
+ //  $('#save').click(function() {
+ //    saveEvent()
+ //    getEvents()
+ //  })
 
- $('#list').click(function() {
-    emptyContainer()
-    listEvents()
+ // $('#list').click(function() {
+ //    emptyContainer()
+ //    listEvents()
 
-  })
+  // })
 });
