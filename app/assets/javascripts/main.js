@@ -61,7 +61,7 @@ function saveEvent(e){
 
 $(function() {
 
-  console.log('test test')
+ //  console.log('test test')
  //  getEvents();
 
  //  $('#save').click(function() {
@@ -69,9 +69,10 @@ $(function() {
  //    getEvents()
  //  })
 
- // $('#list').click(function() {
- //    emptyContainer()
- //    listEvents()
+ $('#list').click(function() {
+    console.log('click click')
+    // emptyContainer()
+    // listEvents()
 
-  // })
+  })
 });
