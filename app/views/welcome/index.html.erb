@@ -1,2 +1,14 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+<%= image_tag @user['picture']['data']['url'].to_s %>
+<%= @user['name'] %>
+<%= @events %>
+
+
+
+<form action="#">
+  <button id="list">list events</button>
+  <ul id="events">
+  </ul>
+</form>
