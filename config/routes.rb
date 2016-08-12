@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'users#index', via: :get
+  get 'welcome/index'
+
+  root to: 'welcome#index', via: :get
   get 'auth/facebook', as: "auth_provider"
-  get 'auth/facebook/callback', to: 'users#login'
+  get 'auth/facebook/callback', to: 'welcome#index'
 
   resources :events
   resources :eventsget, only:[:index]

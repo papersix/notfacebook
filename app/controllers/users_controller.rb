@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   end
 
   def login
-    @user = User.koala_name_picture(request.env['omniauth.auth']['credentials'])
-    @events = User.koala_events(request.env['omniauth.auth']['credentials'])
+    @user = koala_name_picture(request.env['omniauth.auth']['credentials'])
+    @events = koala_events(request.env['omniauth.auth']['credentials'])
     # byebug
     puts @user
     puts @events
