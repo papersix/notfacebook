@@ -1,6 +1,14 @@
 <%= image_tag @user['picture']['data']['url'].to_s %>
 <%= @user['name'] %>
-<%= @events %>
+
+<% @events[0][1]["data"].each do |event| %>
+ <form action="" method="post">
+  <h4><%= event["name"] %></h4>
+  <p><%= event["description"] %></p>
+  <button name="soopersaver" value="saves">Save</button>
+  </form>
+<% end %>
+
 
 
 
@@ -9,6 +17,7 @@
   <ul id="events">
   </ul>
 </form>
+
 
 <!-- {
   "name": "Rahul Alexander",

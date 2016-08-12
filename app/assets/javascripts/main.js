@@ -59,6 +59,15 @@ function saveEvent(e){
     })
 }
 
+$('#saver').click(function() {
+  $(this) {
+    console.log('this this this')
+  // whatever you want to do here.
+  }
+}
+
+
+
 $(function() {
 
  //  console.log('test test')
@@ -69,10 +78,21 @@ $(function() {
  //    getEvents()
  //  })
 
- $('#list').click(function() {
-    console.log('click click')
-    // emptyContainer()
-    // listEvents()
-
-  })
+    $('#list').click(function() {
+      console.log('click click')
+      // emptyContainer()
+      // listEvents()
+    })
+    $('#test').on('click',function (){
+       console.log("ok");
+        $.get({
+        url :'/auth/facebook',
+        type:'GET',
+        dataType: 'json',
+        xhrFields: { withCredentials: true },
+        success: function(data) {
+          console.log('nice work!', data);
+        }
+        });
+    });
 });
