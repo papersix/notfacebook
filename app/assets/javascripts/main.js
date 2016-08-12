@@ -83,6 +83,12 @@ $(function() {
       // emptyContainer()
       // listEvents()
     })
+
+      $('#supersaver').on('click',function (){
+       console.log("ok");
+
+        });
+    });
     $('#test').on('click',function (){
        console.log("ok");
         $.get({
