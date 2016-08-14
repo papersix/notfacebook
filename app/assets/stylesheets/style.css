@@ -1,10 +1,10 @@
+/*Thanks Flexbox
+https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+*/
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-@import url(https://fonts.googleapis.com/css?family=Londrina+Outline);
 body {
 background-color: #F6F6F6;
-
 }
 div {
       background-color: #F6F6F6;
@@ -66,7 +66,7 @@ navbar li{
 
 
  font-family: 'Lato', sans-serif;
-  font-size: 4em;
+  font-size: 2em;
 }
 navbar ul li a{
   text-decoration: none;
@@ -84,3 +84,21 @@ navbar :hover{
   background-color: #234;
 
  }
+
+ .Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aligner-item {
+  max-width: 50%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
