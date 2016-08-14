@@ -1,6 +1,30 @@
+
+function listEvents(e){
+  console.log('clicky')
+  getData(e).done(function(data){
+
+    console.log(data)
+    setTimeout(function(){
+      emptyContainer();
+      data.forEach(function(event){
+        appendEvent(event.name);
+      })
+    },300)
+  });
+}
+
+//gest the data
+function getData(e){
+  emptyContainer();
+  console.log('click getdata')
+  $('#events')
+  return $.getJSON('/events')
+}
+
 function renderEvent (oneEvent) {
 // console.log(oneEvent.event)
   let $sampleEvent = oneEvent.event
+  console.log('hello')
   let $event = $('<h3>').text($sampleEvent.replace(/&quot;/g,'"'))
   var $container = $('#event-container')
   $('#events').html($event)
@@ -18,31 +42,11 @@ function emptyContainer(){
   $('#events').empty();
 }
 
-function getData(e){
-  emptyContainer();
-  $('#events')
-  return $.getJSON('/events')
-}
-
-function listEvents(e){
-  getData(e).done(function(data){
-
-    console.log(data)
-    setTimeout(function(){
-      emptyContainer();
-      data.forEach(function(event){
-
-        appendEvent(event.event);
-      })
-    },300)
-  });
-}
-
 function appendEvent(event){
   let $event = $('<li>').addClass('listed').text(event);
   $('#events').append($event);
 }
-
+//ignore below
 
 function saveEvent(e){
     // e.preventDefault();
@@ -62,8 +66,6 @@ function saveEvent(e){
 
 
 
-
-
 $(function() {
 
  //  console.log('test test')
@@ -75,9 +77,10 @@ $(function() {
  //  })
 
     $('#list').click(function() {
+      e.preventDefault()
       console.log('click click')
-      // emptyContainer()
-      // listEvents()
+      emptyContainer()
+      listEvents()
     })
 
       $('.former').on('submit',function (e){
