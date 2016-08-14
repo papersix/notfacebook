@@ -13,4 +13,6 @@ class UsersController < ApplicationController
     # render :json => {user: @user, events: @events}
   end
 
+
+
 end

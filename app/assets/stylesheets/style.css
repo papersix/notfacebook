@@ -1,14 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Londrina+Outline);
+body {
+background-color: #F6F6F6;
 
-* {
-
-  font-family: Arial;
 }
 div {
-    border: .25px dashed;
-    padding:10px;
+      background-color: #F6F6F6;
   }
 
-h1 {
 
+p, li{
+ font-family: 'Lato:300', sans-serif;
+  color: #2B2B2B;
 
 }
+h1, h2{
+font-family: 'Lato', sans-serif;
+ /*letter-spacing: .25em;*/
+ font-size: 1.5em;
+ color: #DE1B1B;
+
+}
+
+#usrimg {
+  width:450px;
+  padding:35px;
+  margin:2px;
+  border: .25px solid #CCC;
+  margin-left: 10%;
+  background-color: #ccc;
+
+}
+
+
+
+
+#usrimg h1{
+  color:#FFF;
+  float:left;
+  font-size: 3.5em;
+}
+
+#results {
+  /*margin:0 auto;*/
+  clear:both;
+  width:450px;
+  padding:35px;
+  margin:2px;
+  border: .25px solid #CCC;
+  margin-left: 10%;
+}
+
+#results h1 {
+  /*margin:0 auto;*/
+   font-size: 2.5em;
+}
+
+navbar li{
+
+  display: inline-block;
+
+  padding:20px;
+
+
+ font-family: 'Lato', sans-serif;
+  font-size: 4em;
+}
+navbar ul li a{
+  text-decoration: none;
+    color: #ccc;
+}
+
+navbar :hover{
+  text-decoration: none;
+    color: black;
+}
+ button {
+  float:right;
+  border:none;
+  color:#ccc;
+  background-color: #234;
+
+ }

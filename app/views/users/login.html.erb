@@ -1,62 +1,32 @@
-<%= link_to "Back", '/' %>
 
-<%= image_tag @user['picture']['data']['url'].to_s %>
-<%= @user['name'] %>
-
-<% @events[0][1]["data"].each do |event| %>
- <div>
-    <form class ="former" action="" method="post">
-      <h4><%= event["name"] %></h4>
-      <p><%= event["description"] %></p>
-      <button class ="supersaver" name="soopersaver" value="saves">Save</button>
-    </form>
-
-  </div>
-<% end %>
-
-
-<form action="#">
-  <button id="list">list events</button>
-  <ul id="events">
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
+<navbar>
+  <ul>
+    <li><%= link_to "Back", '/' %></li>
+    <li><%= link_to "Saved Events", '/events' %></li>
+    <li><%= link_to "Home", '/' %></li>
   </ul>
-</form>
+</navbar>
+<div id="usrimg">
+  <h1><%= @user['name'] %>'s Events</h1>
+  <%= image_tag @user['picture']['data']['url'].to_s, :size => "100", :crop => :fill %>
+</div>
+<div id="flex-container">
+  <% @events[0][1]["data"].each do |event| %>
+   <div id="results">
+      <form class ="former" action="" method="post">
+      <h1><%= event["name"] %></h1>
+      <h2><%= event["place"]["name"] %></h2>
+      <p><%= event["place"]["location"]%></p>
+        <p><%= event["description"] %></p>
+        <button class ="supersaver" name="soopersaver" value="saves">Save</button>
+      </form>
 
-
-<!-- {
-  "name": "Rahul Alexander",
-  "picture": {
-    "data": {
-      "is_silhouette": false,
-      "url": "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/12366296_10153829782360799_1730626491476499590_n.jpg?oh=b425220b579be9f2f6e317283e682e53&oe=581BC6B6"
-    }
-  },
-  "id": "10152906382455799"
-}
-
-
-
-{
-  "events": {
-    "data": [
-      {
-        "description": "Jamaica Flux 2016 is opening this event on April 16, 2016. It is a large-scale exhibition of research-driven, site-specific art installed in everyday locations along Jamaica Ave.  The exhibition’s public programs will be posted and updated on the project’s website: www.jamaicaflux.info.
-For more information and press inquiries, please contact jamaicaflux@jcal.org.",
-        "end_time": "2016-04-16T20:00:00-0400",
-        "name": "JamaicaFlux Workspaces and Windows 2016",
-        "place": {
-          "name": "Jamaica Center for Arts & Learning",
-          "location": {
-            "city": "Jamaica",
-            "country": "United States",
-            "latitude": 40.703695437112,
-            "longitude": -73.798982587968,
-            "state": "NY",
-            "street": "161-04 Jamaica Ave",
-            "zip": "11432"
-          },
-          "id": "117673111272"
-        },
-        "start_time": "2016-04-16T14:00:00-0400",
-        "id": "870895213021705",
-        "rsvp_status": "attending"
-      }, -->
+    </div>
+  <% end %>
+</div>
+<%= link_to "Back", '/' %>
