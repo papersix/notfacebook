@@ -1,4 +1,4 @@
-/*Thanks Flexbox
+/*Thanks Flexbox!
 https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
 */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100);
@@ -10,7 +10,9 @@ body {
 div {
       background-color: #F6F6F6;
   }
-/*Stackoverflow : Lato Thin Font Advice
+
+/*
+Stackoverflow : Lato Thin Font Advice
 http://stackoverflow.com/questions/15854885/getting-google-web-fonts-to-display-font-weight-100
 */
 p, li{
@@ -18,7 +20,6 @@ p, li{
       font: Ultra-Light 100 1em/1.5em 'Lato';
       font: Ultra-Light 100 1em/1.5em 'Lato', sans-serif;
       color: #2B2B2B;
-
 }
 h1, h2{
 font-family: 'Lato', sans-serif;
@@ -136,8 +137,14 @@ https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/*/
 .welcome * {
   color:#3b5998;
 
- font-family: arial;
 }
+
+
+.welcome a {
+  color:#333;
+
+}
+
 .welcome navbar{
 
  display: none;

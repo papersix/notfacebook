@@ -38,7 +38,8 @@ Perhaps integrating devise / omniauth may have done better in creating / destroy
 ##Credits:
 
 
-Thanks Classmates James / Joe / Suprit / Fizal of Purple Rain for helping along the way.
+Thanks Classmates James / Joe / Suprit / Fizal / Table #01 of Purple Rain for helping along the way.
+
 ** Serge / Bobby / Jason at GA for thier instructional brinkmanship **
 
 
