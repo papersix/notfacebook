@@ -13,10 +13,10 @@ class EventsController < ApplicationController
     end
 
     def create
-      @event = Event.create({
-                      :event => params[:event],
-                    })
-      render :json => @event
+    @event = Event.create({
+                    :event => params[:event],
+                  })
+    render :json => @event
     end
 end
 

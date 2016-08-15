@@ -8,11 +8,32 @@ function listEvents(e){
       emptyContainer();
       data.forEach(function(event){
         appendEvent(event.name);
+        appendPlace(event.place);
+        appendTime(event.time);
+        appendDescription(event.description);
       })
     },300)
   });
 }
 
+function appendEvent(event){
+  let $event = $('<h1>').addClass('listedin').text(event);
+  $('#eventsin').append($event);
+}
+function appendPlace(place){
+  let $place = $('<h2>').addClass('listedin').text(place);
+  $('#eventsin').append($place);
+}
+function appendTime(time){
+  let $time = $('<h3>').addClass('listedin').text(time);
+  $('#eventsin').append($time);
+}
+function appendDescription(description){
+  let $description = $('<p>').addClass('listedin').text(description);
+  $('#eventsin').append($description);
+  $('#eventsin').append('<hr />')
+}
+//ignore below
 //gest the data
 function getData(e){
   emptyContainer();
@@ -42,25 +63,26 @@ function emptyContainer(){
   $('#events').empty();
 }
 
-function appendEvent(event){
-  let $event = $('<li>').addClass('listed').text(event);
-  $('#events').append($event);
-}
-//ignore below
 
 function saveEvent(e){
-    // e.preventDefault();
-    console.log('you hit the save')
-    // let $svevent = ('h4').div:eq(0);
-    console.log(e.target.children[0].innerHTML)
-    // console.log($svevent)
-    // let data = {
-    //   event: $svevent,
-      // }
+    e.preventDefault();
+    // console.log('you hit the save')
+    let $svname = (e.target.children[0].innerHTML)
+    let $svplace = (e.target.children[1].innerHTML)
+    let $svtime = (e.target.children[2].innerHTML)
+    let $svdescription = (e.target.children[4].innerHTML)
+    let data = {
+      name: $svname,
+      place: $svplace,
+      time: $svtime,
+      description: $svdescription
+      }
 
-    // $.post('/events', data).done ( (response) => {
-    // console.log(response);
-    // })
+    console.log(data)
+
+    $.post('/events', data).done ( (response) => {
+    console.log(response);
+    })
 
 }
 
@@ -68,13 +90,7 @@ function saveEvent(e){
 
 $(function() {
 
- //  console.log('test test')
- //  getEvents();
 
- //  $('#save').click(function() {
- //    saveEvent()
- //    getEvents()
- //  })
 
     $('#list').click(function() {
       e.preventDefault()
@@ -85,7 +101,7 @@ $(function() {
 
       $('.former').on('submit',function (e){
        e.preventDefault()
-       console.log("ok");
+       console.log("nice save");
        saveEvent(e);
 
         });
