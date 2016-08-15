@@ -40,7 +40,7 @@ function appendDescription(description){
   $('#eventsin').append('<hr />')
 }
 //ignore below
-//gest the data
+//get the data
 
 
 function emptyContainer(){

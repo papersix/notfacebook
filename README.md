@@ -16,25 +16,30 @@ A user should be able to see items from their facebook events on !facebook
 
 A user should be able to view all items posted on !facebook
 
-*A user should be able to save items from their event feed to !facebook
+A user should be able to save items from their event feed to !facebook
 
-*A user should be able to delete their own posts
 
 A viewer should be able to see all the events listed on !facebook
 
 
-*still in progress
+next steps
 
-##Notes & Issues
+A viewer should be able to see a map of events by neighborhood
+A user should be able to request reminders (ical? text notifications) regarding an event
+A user should be able to delete their own posts
+A user should be able to edit their own posts
+
+##Known & Issues
 
 Facebook login & omniauth is problematic
 Perhaps integrating devise / omniauth may have done better in creating / destroying sessions
-Save does not currently work & results in a 500 server error!!
 
 
 ##Credits:
 
-Thanks James / Joe / Suprit / Fizal of Purple Rain for helping along the way.
+
+Thanks Classmates James / Joe / Suprit / Fizal of Purple Rain for helping along the way.
+** Serge / Bobby / Jason at GA for thier instructional brinkmanship **
 
 
 Omniauth / Facebook originally setup using examples from 
