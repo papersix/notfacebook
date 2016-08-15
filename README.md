@@ -1,24 +1,46 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Not Facebook 
 
-Things you may want to cover:
+An application that allows users to publish selected facebook events onto a secondary website.
+The overall concept is to encapsulate content generated in facebook onto a 3rd party website where it may reach a more targetted audience.
 
-* Ruby version
+Technologies: 
 
-* System dependencies
+Ruby on Rails, Koala Gem, Omniauth-facbook gem, Postgres
 
-* Configuration
+#User Stories
 
-* Database creation
+A user should be able to login to facebook via !facebook
 
-* Database initialization
+A user should be able to see items from their facebook events on !facebook
 
-* How to run the test suite
+A user should be able to view all items posted on !facebook
 
-* Services (job queues, cache servers, search engines, etc.)
+*A user should be able to save items from their event feed to !facebook
 
-* Deployment instructions
+*A user should be able to delete their own posts
 
-* ...
+A viewer should be able to see all the events listed on !facebook
+
+
+*indicates still in progress
+
+#Notes & Issues
+
+Facebook login & omniauth is problematic
+Perhaps integrating devise / omniauth may have done better in creating / destroying sessions
+Save does not currently work & results in a 500 server error!!
+
+
+Credits:
+
+Thanks James / Joe / Suprit / Fizal of Purple Rain for helping along the way.
+
+
+Omniauth / Facebook originally setup using examples from 
+Ryan Bates at Railcasts 
+http://railscasts.com/episodes/360-facebook-authentication
+
+Followed up by Koala Integration noted here at Launch School
+https://launchschool.com/blog/facebook-graph-api-using-omniauth-facebook-and-koala

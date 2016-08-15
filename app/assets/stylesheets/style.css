@@ -1,19 +1,24 @@
 /*Thanks Flexbox
 https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
 */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
+
 body {
-background-color: #F6F6F6;
+  background-color: #F6F6F6;
 }
 div {
       background-color: #F6F6F6;
   }
-
-
+/*Stackoverflow : Lato Thin Font Advice
+http://stackoverflow.com/questions/15854885/getting-google-web-fonts-to-display-font-weight-100
+*/
 p, li{
- font-family: 'Lato:300', sans-serif;
-  color: #2B2B2B;
+      font: 100 1em/1.5em 'Lato';
+      font: Ultra-Light 100 1em/1.5em 'Lato';
+      font: Ultra-Light 100 1em/1.5em 'Lato', sans-serif;
+      color: #2B2B2B;
 
 }
 h1, h2{
@@ -23,7 +28,6 @@ font-family: 'Lato', sans-serif;
  color: #DE1B1B;
 
 }
-
 #usrimg {
   width:450px;
   padding:35px;
@@ -33,14 +37,13 @@ font-family: 'Lato', sans-serif;
   background-color: #ccc;
 
 }
-
-
-
-
 #usrimg h1{
   color:#FFF;
   float:left;
-  font-size: 3.5em;
+
+  font: 100 4em/1.5em 'Lato';
+      font: Ultra-Light 100 1em/1.5em 'Lato';
+      font: Ultra-Light 100 1em/1.5em 'Lato', sans-serif;
 }
 
 #results {
@@ -61,11 +64,10 @@ font-family: 'Lato', sans-serif;
 navbar li{
 
   display: inline-block;
-
   padding:20px;
 
 
- font-family: 'Lato', sans-serif;
+ font-family: 'Lato:300', sans-serif;
   font-size: 2em;
 }
 navbar ul li a{
@@ -77,6 +79,12 @@ navbar :hover{
   text-decoration: none;
     color: black;
 }
+
+
+/*
+Solved by Flexbox
+Cleaner, hack-free CSS
+https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/*/
 
 
  .Aligner {
@@ -107,6 +115,8 @@ navbar :hover{
   color:#333;
   background-color: #ccc;
   width:100%;
+   padding:10px;
+  font-size:1.2em;
 }
 
 .supersaver:hover {
@@ -115,4 +125,17 @@ navbar :hover{
   color:#FFF;
   background-color: #333;
   width:100%;
+
+}
+
+.welcome  {
+
+  background-image: url(/assets/nfb.jpg);
+  background-size: cover;
+}
+
+
+.welcome navbar{
+
+ display: none;
 }

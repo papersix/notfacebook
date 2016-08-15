@@ -68,12 +68,10 @@ function saveEvent(e){
     e.preventDefault();
     // console.log('you hit the save')
     let $svname = (e.target.children[0].innerHTML)
-    let $svplace = (e.target.children[1].innerHTML)
-    let $svtime = (e.target.children[2].innerHTML)
-    let $svdescription = (e.target.children[4].innerHTML)
+    let $svtime = (e.target.children[1].innerHTML)
+    let $svdescription = (e.target.children[2].innerHTML)
     let data = {
       name: $svname,
-      place: $svplace,
       time: $svtime,
       description: $svdescription
       }
