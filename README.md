@@ -44,9 +44,9 @@ http://railscasts.com/episodes/360-facebook-authentication
 Followed up by Koala Integration noted here at Launch School
 https://launchschool.com/blog/facebook-graph-api-using-omniauth-facebook-and-koala
 
-(media/ntfcbk_001.png "Not Facebook 1")
-(media/ntfcbk_002.png "Not Facebook 2")
-(media/ntfcbk_003.png "Not Facebook 3")
+![Alt text](media/ntfcbk_001.png "Not Facebook 1")
+![Alt text](media/ntfcbk_002.png "Not Facebook 2")
+![Alt text](media/ntfcbk_003.png "Not Facebook 3")
 
 
 
