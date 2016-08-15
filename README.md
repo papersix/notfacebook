@@ -1,15 +1,14 @@
 # README
-
-Not Facebook 
+#Not Facebook 
 
 An application that allows users to publish selected facebook events onto a secondary website.
 The overall concept is to encapsulate content generated in facebook onto a 3rd party website where it may reach a more targetted audience.
 
-Technologies: 
+##Technologies: 
 
 Ruby on Rails, Koala Gem, Omniauth-facbook gem, Postgres
 
-#User Stories
+##User Stories
 
 A user should be able to login to facebook via !facebook
 
@@ -24,16 +23,16 @@ A user should be able to view all items posted on !facebook
 A viewer should be able to see all the events listed on !facebook
 
 
-*indicates still in progress
+*still in progress
 
-#Notes & Issues
+##Notes & Issues
 
 Facebook login & omniauth is problematic
 Perhaps integrating devise / omniauth may have done better in creating / destroying sessions
 Save does not currently work & results in a 500 server error!!
 
 
-Credits:
+##Credits:
 
 Thanks James / Joe / Suprit / Fizal of Purple Rain for helping along the way.
 
