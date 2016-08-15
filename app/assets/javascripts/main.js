@@ -15,6 +15,12 @@ function listEvents(e){
     },300)
   });
 }
+function getData(e){
+  emptyContainer();
+  console.log('click getdata')
+  $('#events')
+  return $.getJSON('/events')
+}
 
 function appendEvent(event){
   let $event = $('<h1>').addClass('listedin').text(event);
@@ -35,29 +41,7 @@ function appendDescription(description){
 }
 //ignore below
 //gest the data
-function getData(e){
-  emptyContainer();
-  console.log('click getdata')
-  $('#events')
-  return $.getJSON('/events')
-}
 
-function renderEvent (oneEvent) {
-// console.log(oneEvent.event)
-  let $sampleEvent = oneEvent.event
-  console.log('hello')
-  let $event = $('<h3>').text($sampleEvent.replace(/&quot;/g,'"'))
-  var $container = $('#event-container')
-  $('#events').html($event)
-}
-
-function getEvents(){
-  $.getJSON('/eventsget').done(function(events) {
-    let oneEvent = events.value.shift()
-    renderEvent(oneEvent)
-    //fix shift unecessary!!
-  })
-}
 
 function emptyContainer(){
   $('#events').empty();
@@ -83,8 +67,22 @@ function saveEvent(e){
     })
 
 }
+// function renderEvent (oneEvent) {
+// // console.log(oneEvent.event)
+//   let $sampleEvent = oneEvent.event
+//   console.log('hello')
+//   let $event = $('<h3>').text($sampleEvent.replace(/&quot;/g,'"'))
+//   var $container = $('#event-container')
+//   $('#events').html($event)
+// }
 
-
+// function getEvents(){
+//   $.getJSON('/eventsget').done(function(events) {
+//     let oneEvent = events.value.shift()
+//     renderEvent(oneEvent)
+//     //fix shift unecessary!!
+//   })
+// }
 
 $(function() {
 
