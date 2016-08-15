@@ -104,18 +104,18 @@ $(function() {
 
         });
 
-    $('#test').on('click',function (){
-       console.log("ok");
-        $.get({
-        url :'/auth/facebook',
-        type:'GET',
-        dataType: 'json',
-        xhrFields: { withCredentials: true },
-        success: function(data) {
-          console.log('nice work!', data);
-        }
-        });
-    });
+    // $('#test').on('click',function (){
+    //    console.log("ok");
+    //     $.get({
+    //     url :'/auth/facebook',
+    //     type:'GET',
+    //     dataType: 'json',
+    //     xhrFields: { withCredentials: true },
+    //     success: function(data) {
+    //       console.log('nice work!', data);
+    //     }
+    //     });
+    // });
 
 
 

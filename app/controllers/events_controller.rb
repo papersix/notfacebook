@@ -13,9 +13,8 @@ class EventsController < ApplicationController
     end
 
     def create
-    @event = Event.create({
-                    :event => params[:event],
-                  })
+    event = {name: params[:name], time: params[:time], description: params[:description]}
+    @event = Event.create(event)
     render :json => @event
     end
 end
@@ -32,7 +31,7 @@ end
     # end
 
 
-    def destory
+    def destroy
 
 
     end
